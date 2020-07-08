@@ -1,0 +1,12 @@
+.form,
+.greeting {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+/* .showing을 css에만 만들어놓고
+js에서 classList.add("showing")을 만들어
+보였다 안보였다 하게 만들기 */
