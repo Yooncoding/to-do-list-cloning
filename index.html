@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Yoon coding" />
+    <link rel="stylesheet" href="index.css" />
+    <title>To do list cloning</title>
+    <script
+      src="https://kit.fontawesome.com/5a302792a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="clock.js"></script>
+    <script defer src="greeting.js"></script>
+    <script defer src="todo.js"></script>
+    <script defer src="weather.js"></script>
+    <script defer src="bg.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Yoon coding">
-  <link rel="stylesheet" href="index.css">
-  <title>To do list cloning</title>
-</head>
-
-<body>
-  <div class="clock">
-    <h1>00:00</h1>
-  </div>
-  <form class="name form">
-    <input type="text" placeholder="이름을 입력해주세요." />
-  </form>
-  <h4 class="greet greeting"></h4>
-  <form class="toDoForm">
-    <input type="text" placeholder="할일을 입력해주세요." />
-  </form>
-  <ul class="toDoList">
-  </ul>
-  <span class="weather"></span>
-  <script src="clock.js"></script>
-  <script src="greeting.js"></script>
-  <script src="todo.js"></script>
-  <script src="weather.js"></script>
-</body>
-
+  <body>
+    <div class="overlay"></div>
+    <div class="background"></div>
+    <span class="weather"></span>
+    <div class="contents">
+      <div class="clock">
+        <span>00:00</span>
+      </div>
+      <div class="link">
+        <ul>
+          <li>
+            <a href="https://www.google.co.kr/" title="구글"
+              ><i class="fab fa-google"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.inflearn.com/" title="인프런"
+              ><i class="fas fa-leaf"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://academy.dream-coding.com/courses/portfolio"
+              title="드림코딩"
+              ><i class="fab fa-viadeo"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.netflix.com/browse" title="넷플릭스"
+              ><i class="fab fa-buffer"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <form class="name form">
+        <input type="text" placeholder="Type your name here" />
+      </form>
+      <h4 class="greet greeting"></h4>
+      <form class="toDoForm">
+        <input type="text" placeholder="Write a To Do here" />
+      </form>
+      <ul class="toDoList"></ul>
+    </div>
+    <div class="footer"><span>Written By Yoon</span></div>
+  </body>
 </html>

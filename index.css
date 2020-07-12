@@ -1,12 +1,217 @@
+/* JS */
 .form,
 .greeting {
   display: none;
 }
 
 .showing {
+  animation: fadeIn 0.5s linear;
   display: block;
 }
 
 /* .showing을 css에만 만들어놓고
 js에서 classList.add("showing")을 만들어
 보였다 안보였다 하게 만들기 */
+
+/* HTML */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  /* Font Size */
+  --font-large: 108px;
+  --font-medium: 25px;
+  --font-reguler: 20px;
+  --font-small: 15px;
+  --font-micro: 12px;
+  /* Font Weghit */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /* Size */
+  --icon-size: 26px;
+  --padding-large: 50px;
+  --padding-medium: 25px;
+  --padding-small: 20px;
+  --padding-micro: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+li {
+  list-style: none;
+  animation: fadeIn 0.5s linear;
+}
+
+button {
+  cursor: pointer;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeIn 0.5s linear;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: url(../images/16.png);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -140px;
+  z-index: 20;
+  text-align: center;
+  color: var(--color-light-white);
+}
+
+.clock {
+  font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
+}
+
+.link ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.link i {
+  border: 1px solid var(--color-light-white);
+  border-radius: 50%;
+  font-size: var(--icon-size);
+  line-height: 46px;
+  width: 48px;
+  height: 48px;
+  transition: 300ms ease;
+}
+
+.link i:hover {
+  transform: rotate(-30deg) scale(1.1);
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.name input {
+  margin-top: var(--padding-small);
+  width: 250px;
+  height: 30px;
+  border-bottom: 1px solid var(--color-dark-white);
+  font-size: var(--font-medium);
+  color: var(--color-dark-white);
+}
+
+.name input::placeholder {
+  color: var(--color-dark-white);
+}
+
+.greeting {
+  margin-top: var(--padding-small);
+  font-size: var(--font-medium);
+  color: var(--color-light-white);
+}
+
+.toDoForm input {
+  margin-top: var(--padding-medium);
+  margin-bottom: var(--padding-micro);
+  width: 220px;
+  height: 25px;
+  border-bottom: 1px solid var(--color-light-white);
+  font-size: var(--font-reguler);
+  color: var(--color-light-white);
+}
+
+.toDoForm input::placeholder {
+  color: var(--color-light-white);
+}
+
+.toDoList {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+li button {
+  margin-left: 8px;
+  border-radius: 100%;
+  outline: none;
+  border: 1px solid var(--color-light-white);
+  background-color: transparent;
+  color: var(--color-light-white);
+  width: 17px;
+  height: 17px;
+}
+
+.weather {
+  margin: var(--padding-medium);
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-light-white);
+  border-radius: 4px;
+  padding: 4px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-reguler-bold);
+  text-align: center;
+  font-style: oblique;
+}
+
+.footer {
+  margin: var(--padding-medium);
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  color: var(--color-light-white);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

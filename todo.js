@@ -42,7 +42,7 @@ function printList(text) {
   const span = document.createElement("span");
   const new_id = todos.length + 1;
 
-  span.innerText = text;
+  span.innerHTML = `<i class="fas fa-caret-right"></i> ` + text;
   delete_btn.innerText = "X"
   delete_btn.addEventListener("click", delete_todo)
   li.appendChild(span);
